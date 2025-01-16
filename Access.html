@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container1">
+        <div id="accessContainer" class="Access-container">
+            <img src="zhara imahges/IMG_3348-cutout.png" width="200px"
+            height="200px" alt="">
+            <h1 class="acess-h1">Enter correct Pin or Else</h1>
+            <input type="text" id="codeInput" readonly>
+            <div class="passwordGrid">
+                <button onclick="appendToInput('1')">1</button>
+                <button onclick="appendToInput('2')">2</button>
+                <button onclick="appendToInput('3')">3</button>
+                <button onclick="appendToInput('4')">4</button>
+                <button onclick="appendToInput('5')">5</button>
+                <button onclick="appendToInput('6')">6</button>
+                <button onclick="appendToInput('7')">7</button>
+                <button onclick="appendToInput('8')">8</button>
+                <button onclick="appendToInput('9')">9</button>
+                <button onclick="clearInput()">Clear</button>
+                <button onclick="appendToInput('0')">0</button>
+                <button onclick="checkAccess()">Access</button>
+            </div>
+        </div>
+        <div id="accessGrantedBox" class="hidden">
+            <h2>Access Granted!</h2>
+        </div>
+    </div>
+</body>
+</html>
