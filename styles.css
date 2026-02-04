@@ -103,7 +103,8 @@ h1 {
 }
 /* aninations above */
 
-.passwordGrid {
+.passwordGrid,
+.passwordGrid2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -112,7 +113,8 @@ h1 {
   gap: 10px;
   /* row-gap: 5px; */
 }
-.passwordGrid button {
+.passwordGrid button,
+.passwordGrid2 button {
   border: none;
   display: inline-block;
   background-color: #190933;
@@ -134,7 +136,8 @@ h1 {
   gap: 20px;
   animation: appear 4s ease-in-out;
 }
-.passwordGrid button:hover {
+.passwordGrid button:hover,
+.passwordGrid2 button:hover {
   background: #fe5d9f;
   color: #001d4a;
   cursor: pointer;
@@ -144,7 +147,8 @@ h1 {
   display: none;
 }
 
-#accessGrantedBox {
+#accessGrantedBox,
+#accessGrantedBox2 {
   background-color: #4caf50;
 
   border-radius: 16px;

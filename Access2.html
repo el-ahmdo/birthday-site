@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page 2</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="container1">
+      <div id="accessContainer2" class="Access-container">
+        <img
+          src="zhara imahges/IMG_3348-cutout.png"
+          width="200"
+          height="200"
+          alt="" />
+
+        <h1 class="acess-h1">
+          I just knew you would open.... since you have decided to be stubborn
+          whats the code?
+        </h1>
+
+        <input type="text" id="codeInput2" readonly />
+
+        <div class="passwordGrid2">
+          <button onclick="appendToInput2('1')">1</button>
+          <button onclick="appendToInput2('2')">2</button>
+          <button onclick="appendToInput2('3')">3</button>
+          <button onclick="appendToInput2('4')">4</button>
+          <button onclick="appendToInput2('5')">5</button>
+          <button onclick="appendToInput2('6')">6</button>
+          <button onclick="appendToInput2('7')">7</button>
+          <button onclick="appendToInput2('8')">8</button>
+          <button onclick="appendToInput2('9')">9</button>
+          <button onclick="clearInput2()">Clear</button>
+          <button onclick="appendToInput2('0')">0</button>
+          <button onclick="checkAccess2()">Access</button>
+        </div>
+      </div>
+
+      <div id="accessGrantedBox2" class="hidden">
+        <h2>Access Granted!</h2>
+      </div>
+    </div>
+  </body>
+</html>

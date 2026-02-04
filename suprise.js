@@ -16,7 +16,8 @@ const bae = document.querySelector(".bae");
 const mamanmanal = document.querySelector(".mammanmanal");
 const noor = document.querySelector(".noor");
 const ameer = document.querySelector(".ameer");
-const blank = document.querySelector(".blank");
+const nora = document.querySelector(".Nora");
+const yaya = document.querySelector(".yaya");
 
 const suprise_menu = document.querySelector(".menuGrid");
 
@@ -44,7 +45,11 @@ ameer.addEventListener("click", () => {
   // Pass the target URL and the class name of the container
   transitionToPage("ameer.html", "surprise-container");
 });
-blank.addEventListener("click", () => {
+nora.addEventListener("click", () => {
   // Pass the target URL and the class name of the container
-  transitionToPage("", "surprise-container");
+  transitionToPage("nora.html", "surprise-container");
+});
+yaya.addEventListener("click", () => {
+  // Pass the target URL and the class name of the container
+  transitionToPage("yaya.html", "surprise-container");
 });

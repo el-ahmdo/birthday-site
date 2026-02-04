@@ -18,6 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
   //loading images
 
   const images = [
+    { src: "images/image29.JPG" },
+    { src: "images/image30.JPG" },
+    { src: "images/image31.JPG" },
+    { src: "images/Image3.JPG" },
+    { src: "images/image33.JPG" },
+    { src: "images/image34.JPG" },
+    { src: "images/image35.JPG" },
+    { src: "images/image36.JPG" },
+    { src: "images/image38.JPG" },
     { src: "images/Image1.PNG" },
     { src: "images/Image10.JPG" },
     { src: "images/Image11.JPG" },
@@ -43,12 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "images/IMG_4642.JPG" },
     { src: "images/IMG_4643.JPG" },
     { src: "images/IMG_7035.JPG" },
-    // { src: "images/zahra25.png" },
-    // { src: "images/zahra26.png" },
-    // { src: "images/zahra27.png" },
-    // { src: "images/zahra28.png" },
-    // { src: "images/zahra29.png" },
-    // { src: "images/zahra30.jpg" },
+    { src: "images/image24.JPG" },
+    { src: "images/image25.JPG" },
+    { src: "images/image26.JPG" },
+    { src: "images/image27.JPG" },
+    { src: "images/image28.JPG" },
   ];
 
   const videos = [
@@ -57,6 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "vides/vid4.MOV" },
     { src: "vides/vid5.MOV" },
     { src: "vides/vid1.mp4" },
+    { src: "vides/" },
+    { src: "vides/vid7.MOV" },
+    { src: "vides/vid8.MOV" },
+    { src: "vides/vid9.MOV" },
+    { src: "vides/vid10.MOV" },
   ];
 
   const imageContainer = document.getElementById("imageContainer");
