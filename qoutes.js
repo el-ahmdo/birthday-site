@@ -79,7 +79,7 @@ const quotes = [
 
   "Your Heart: i dont think you have the same heart as everyone else, yours is made of gold and pure love.",
 
-  "Your smile: Oh your beautiful smile — the one that comes with those gorgeous eyes and instantly makes my world brighter every single time.",
+  "Your smile: Oh your beautiful smile the one that comes with those gorgeous eyes and instantly makes my world brighter every single time.",
 ];
 
 const loadQoutes = () => {
@@ -99,13 +99,12 @@ const loadQoutes = () => {
     qouteContainer.classList.add(quoteClassName);
 
     const qouteElement = document.createElement("p");
-    qouteElement.textContent = `- ${qoute}`; // Add a dash before the quote
+    qouteElement.textContent = `${qoute}`; // Add a dash before the quote
     qouteContainer.appendChild(qouteElement);
 
     qoutesContainer.appendChild(qouteContainer);
   });
 
-  // Add the final quote after all the other quotes
   const finalQoute = document.createElement("h1");
   finalQoute.textContent = `I could go on forever about all the things that make you this incredible person you are but really everything would fall short..... you are an incredible person and May Allah reward you ten folds lol, a Thousand folds and may he Give you all that is good in this life and the next Ameen Ya Rabbal Alamin   Happy Birthday Bunny ❤️`;
   qoutesContainer.appendChild(finalQoute);
