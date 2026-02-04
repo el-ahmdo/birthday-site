@@ -1,111 +1,133 @@
-body{
-    background:radial-gradient(circle, white,#8ffcff, white);
-    width: 100vw;
-    height: auto;
+body {
+  background: radial-gradient(circle, white, #f5a6e6, #fe5d9f);
+  width: 100vw;
+  height: auto;
 }
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-#imageContainer{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    animation: appear 3s ease-in-out;
-    gap: 5px;
+#imageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  animation: appear 3s ease-in-out;
+  gap: 5px;
 }
 @keyframes appear {
-    from{
-        opacity: 0;
-        transform: scale(0);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-#imageContainer div{
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    border: none;
-    background: #c1121f;
-    color:white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease;
-    margin-top: 20px;
-
-}
-h1{
-    font-size: 30px;
-    font-weight: 500;
-    color: #c1121f;
-    font-family: cursive;
-    text-align: center;
-
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
-#imageContainer div:hover{
-    transform: scale(1.1);
-}
-.container{
-    width: 95%;
-    margin: 0 auto;
+#imageContainer img {
+  border-radius: 16px;
+  object-fit: cover;
 }
 
-
-.Qoute-container{
-    animation: appear 3s ease-in-out;
-    width: 75%;
-  
-    margin: 0 auto;
+#imageContainer div {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+  background: #fe5d9f;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+  margin-top: 20px;
 }
-.Qoute-container h1{
-    text-align: center;
-    font-size: 30px;
-    font-weight: 500;
-
+h1 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #190933;
+  font-family: cursive;
+  text-align: center;
 }
 
-.qoutes{
-    background-color: #c1121f;
-    color: aliceblue;
-    padding: 10px;
-    font-size: 20px;
+#imageContainer div:hover {
+  transform: scale(1.2);
+  background: #190933;
+}
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.Qoute-container {
+  animation: appear 3s ease-in-out;
+  width: 75%;
+  padding: 10px;
+  margin: 0 auto;
+}
+.Qoute-container h1 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.qoutes {
+  background-color: #190933;
+  color: #ef99df;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .Qoute-container h1:nth-of-type(2) {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 25px;
 }
-.videos-container{
+.videos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  animation: appear 3s ease-in-out;
+  gap: 5px;
+  margin-top: 40px;
+}
+.videos-container div {
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease;
+  margin-top: 20px;
+}
+
+.videos-container div:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 640px) {
+  /* styles for small screens */
+
+  #imageContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    animation: appear 3s ease-in-out;
+    gap: 5px;
+    justify-items: center;
+  }
+
+  .videos-container {
+    display: grid;
+    grid-template-columns: 1fr;
     animation: appear 3s ease-in-out;
     gap: 5px;
     margin-top: 40px;
-}
-.videos-container div{
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    border: none;
-    color:white;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease;
-    margin-top: 20px;
-}
-
-.videos-container div:hover{
-    transform: scale(1.1);
-
-
+    justify-items: center;
+  }
 }

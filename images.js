@@ -1,133 +1,110 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-
-  function transitionToPage(url,container) {
+  function transitionToPage(url, container) {
     const currentPage = document.querySelector(`.${container}`);
-    currentPage.classList.add('fade-out1');
+    currentPage.classList.add("fade-out1");
     setTimeout(() => {
       window.location.href = url;
     }, 2000); // 2-second delay for fade-out
-  
   }
   //trasnsition from menu to photos of us
-const photoOfUs = document.querySelector('.photos');
+  const photoOfUs = document.querySelector(".photos");
 
-if (photoOfUs) {
-  photoOfUs.addEventListener("click", () => {
-      transitionToPage('photos.html','menuGrid');
-
-  });
-}
-
-
-
-
-
-//loading images
-
-const images = [
-  { src: 'images/zahra1.jpg' }, { src: 'images/zahra2.jpg' },
-  { src: 'images/zahra3.jpg' }, { src: 'images/zahra4.jpg' },
-  { src: 'images/zahra5.jpg' }, { src: 'images/zahra6.jpg' },
-  { src: 'images/zahra7.jpg' }, { src: 'images/zahra8.jpg' },
-  { src: 'images/zahra9.jpg' }, { src: 'images/zahra10.jpg' },
-  { src: 'images/zahra11.jpg' }, { src: 'images/zahra12.jpg' },
-  { src: 'images/zahra13.jpg' },  { src: 'images/zahra14.jpg' },
-  
-  { src: 'images/zahra15.jpg' },{ src: 'images/zahra16.jpg' },
-  { src: 'images/zahra17.jpg' },{ src: 'images/zahra18.jpg' },
-  { src: 'images/zahra19.jpg' },{ src: 'images/zahra10.jpg' },
-  { src: 'images/zahra21.jpg' },{ src: 'images/zahra22.jpg' },
-  { src: 'images/zahra23.jpg' },{ src: 'images/zahra24.png' },
-  { src: 'images/zahra25.png' },{ src: 'images/zahra26.png' },
-  { src: 'images/zahra27.png' },{ src: 'images/zahra28.png' },
-  { src: 'images/zahra29.png' },{ src: 'images/zahra30.jpg' },
-
-];
-  const videos=[
-    {src:"vides/vid1.mp4"},  {src:"vides/vid2.mp4"},
-    {src:"vides/vid3.MOV"},  {src:"vides/vid4.MOV"},
-    {src:"vides/vid5.MOV"},  {src:"vides/vid6.MOV"},
-    {src:"vides/vid7.MOV"},  {src:"vides/vid8.MOV"},
-    {src:"vides/vid9.MOV"},  {src:"vides/vid10.MOV"},
-    {src:"vides/vid11.MOV"},  {src:"vides/vid12.MOV"},
-    {src:"vides/vid4.MOV"},  {src:"vides/13.MOV"},
-
-
-
-
-  ]
-
-  const imageContainer = document.getElementById('imageContainer');
-  const vidcontainer = document.getElementById('vidcontainer');
-
-  
-  // Loop through the images array
-  const loadImages=()=>{
-  images.map((image) => {
-    // Create a div to wrap the image
-    const imageDiv = document.createElement('div');
-  
-    // Create an img element
-    const img = document.createElement('img');
-    img.src = image.src; // Set the source of the image
-  
-    // Optional: Style the image
-    img.style.width = '280px';
-    img.style.height = '280px';
-  
-    // Append the image to the div
-    imageDiv.appendChild(img);
-  
-    // Append the div to the container
-    imageContainer.append(imageDiv);
-
-  });
-}
-loadImages()
-
-
-const loadVids = () => {
-  // Ensure the container exists
-  const videoContainer = document.querySelector(".videos-container");
-
-  if (!videoContainer) {
-    console.error("Error: '.video-container' not found.");
-    return;
+  if (photoOfUs) {
+    photoOfUs.addEventListener("click", () => {
+      transitionToPage("photos.html", "menuGrid");
+    });
   }
 
-  videos.forEach((video) => {
-    // Create a div to wrap the video
-    const vidDiv = document.createElement('div');
-    vidDiv.style.margin = '10px'; // Optional styling
+  //loading images
 
-    // Create a video element
-    const vid = document.createElement('video');
-    vid.src = video.src; // Access the 'src' property of the video object
-    vid.style.width = '280px';
-    vid.style.height = '280px';
-    vid.controls = true; // Add video controls
+  const images = [
+    { src: "images/Image1.PNG" },
+    { src: "images/Image10.JPG" },
+    { src: "images/Image11.JPG" },
+    { src: "images/Image13.JPG" },
+    { src: "images/Image14.JPG" },
+    { src: "images/Image15.JPG" },
+    { src: "images/Image16.JPG" },
+    { src: "images/Image17.JPG" },
+    { src: "images/Image19.JPG" },
+    { src: "images/Image18.JPG" },
+    { src: "images/Image2.PNG" },
+    { src: "images/Image20.JPG" },
+    { src: "images/Image21.JPG" },
+    { src: "images/Image22.JPG" },
 
-    // Append the video to the div
-    vidDiv.appendChild(vid);
+    { src: "images/Image3.JPG" },
+    { src: "images/Image4.PNG" },
+    { src: "images/Image5.PNG" },
+    { src: "images/Image6.JPG" },
+    { src: "images/Image8.JPG" },
+    { src: "images/Image7.JPG" },
+    { src: "images/IMG_4640.JPG" },
+    { src: "images/IMG_4642.JPG" },
+    { src: "images/IMG_4643.JPG" },
+    { src: "images/IMG_7035.JPG" },
+    // { src: "images/zahra25.png" },
+    // { src: "images/zahra26.png" },
+    // { src: "images/zahra27.png" },
+    // { src: "images/zahra28.png" },
+    // { src: "images/zahra29.png" },
+    // { src: "images/zahra30.jpg" },
+  ];
 
-    // Append the div to the container
-    vidcontainer.appendChild(vidDiv);
-  });
-};
+  const videos = [
+    { src: "vides/vid2.MOV" },
+    { src: "vides/vid3.MOV" },
+    { src: "vides/vid4.MOV" },
+    { src: "vides/vid5.MOV" },
+    { src: "vides/vid1.mp4" },
+  ];
 
+  const imageContainer = document.getElementById("imageContainer");
 
-loadVids()
-  //end
- 
+  // Loop through the images array
+  const loadImages = () => {
+    images.map((image) => {
+      // Create a div to wrap the image
+      const imageDiv = document.createElement("div");
 
+      // Create an img element
+      const img = document.createElement("img");
+      img.src = image.src; // Set the source of the image
 
-//loading questions
+      // Optional: Style the image
+      img.style.width = "100%";
+      img.style.height = "100%";
 
-  //loading qoutes
-  
-   
+      // Append the image to the div
+      imageDiv.appendChild(img);
 
-// end
+      // Append the div to the container
+      imageContainer.append(imageDiv);
+    });
+  };
+  loadImages();
 
+  const loadVideos = () => {
+    const vidContainer = document.getElementById("vidcontainer");
+
+    if (!vidContainer) {
+      console.error("Video container not found");
+      return;
+    }
+
+    videos.forEach((vid) => {
+      const wrapper = document.createElement("div");
+
+      const video = document.createElement("video");
+      video.src = vid.src;
+      video.controls = true;
+      video.width = 280;
+      video.height = 280;
+      video.preload = "metadata";
+
+      wrapper.appendChild(video);
+      vidContainer.appendChild(wrapper);
+    });
+  };
+  loadVideos();
 });

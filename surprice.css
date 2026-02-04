@@ -1,90 +1,108 @@
-.surprise-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    animation: appear 3s ease-in-out;
-
+.surprise-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  animation: appear 3s ease-in-out;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
- body{
-        background:radial-gradient(circle, white,#8ffbffc3, white);
-        width: 100vw;
-    }
+body {
+  background: radial-gradient(circle, white, #f5a6e6, #fe5d9f);
+  width: 100vw;
+}
 
-.menuGrid{
-    display: grid;
-    grid-template-columns: 1fr 1fr  ;
-    grid-template-rows: auto;
-    gap: 30px;
-    }
-    .menu{
-        width: 280px;
-        height: 250px;
-        border-radius: 15px;
-        border: none;
-        background: #c1121f;
-        color:white;
-        font-family: cursive;
-        font-size: 30px;
-        font-weight: bold;
-        padding-bottom:  5px;
-        transition: background;
-        transition: transform 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-    }
-    .menu:hover{
-        background: #8ffcff;
-        color: #c1121f;
-        transform: scale(1.2);
-        padding: 10px 10px;
-    }
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 30px;
+}
 
-    @keyframes appear {
-        from{
-            opacity: 0;
-            transform: scale(0);
-        }
-        to{
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
+.menu {
+  width: 280px;
+  height: 250px;
+  border-radius: 15px;
+  border: none;
+  background: #190933;
+  color: #ef99df;
+  font-family: cursive;
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  transition: background;
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.menu:hover {
+  background: #fe5d9f;
+  color: #001d4a;
+  transform: scale(1.2);
+  padding: 10px 10px;
+}
 
-    @keyframes disappear {
-        from{
-            opacity: 1;
-            transform: scale(1);
-        }
-        to{
-            opacity: 0;
-            transform: scale(0);
-        }
-    }
-    .fade-out1{
-        animation: disappear 2.3s ease-in-out;
+@media (max-width: 640px) {
+  /* styles for small screens */
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: 100vh;
+    justify-items: start;
+  }
 
-    }
+  .surprise-container {
+    height: auto;
+    overflow-y: scroll;
+  }
 
-    .vid-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: appear 3s ease-in-out;
+  .menu:hover {
+    transform: none;
+    padding: 10px 10px;
+  }
+}
 
-    }
-    .vid-container video{
-        height: 600px;
-        margin-top: 30px;
-    }
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes disappear {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+.fade-out1 {
+  animation: disappear 2.3s ease-in-out;
+}
+
+.vid-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: appear 3s ease-in-out;
+}
+.vid-container video {
+  height: 600px;
+  margin-top: 30px;
+}
