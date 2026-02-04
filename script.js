@@ -1,81 +1,137 @@
-// ================= PAGE TRANSITIONS =================
-function transitionToPage(url, selector) {
-  const currentPage = document.querySelector(selector);
-  if (!currentPage) return;
-
+// Function to handle the page transition with fade-out effect
+function transitionToPage(url) {
+  const currentPage = document.querySelector(".container");
   currentPage.classList.add("fade-out");
 
   setTimeout(() => {
     window.location.href = url;
-  }, 2000);
+  }, 2000); // 2-second delay for fade-out
 }
 
-// ================= PAGE 1 =================
+function transitionToPage1(url) {
+  const currentPage = document.querySelector("#accessGrantedBox");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
+function transitionToPage2(url) {
+  const currentPage = document.querySelector("#question-container");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
+// References to elements  for page 2
 const inputField = document.getElementById("codeInput");
 const accessContainer = document.getElementById("accessContainer");
 const accessGrantedBox = document.getElementById("accessGrantedBox");
 
+// Function to append numbers to the input field
 function appendToInput(value) {
-  if (!inputField) return;
   if (inputField.value.length < 4) {
     inputField.value += value;
   }
 }
 
 function clearInput() {
-  if (!inputField) return;
-  inputField.value = "";
+  // Changed from `clear` to avoid potential conflicts
+  codeInput.value = "";
 }
 
+// Function to check the entered code and transition if correct
 function checkAccess() {
-  if (!inputField) return;
-
   const correctCode = "2016";
 
   if (inputField.value === correctCode) {
+    // Hide the access container and show the "Access Granted" box
     accessContainer.style.display = "none";
     accessGrantedBox.classList.remove("hidden");
 
+    // Keep the "Access Granted" box visible for 2 seconds before redirecting
     setTimeout(() => {
-      transitionToPage("menu.html", "#accessGrantedBox");
+      transitionToPage1("menu.html");
     }, 2000);
   } else {
+    // Show an alert for incorrect code and clear the input
     alert("Access Denied! Incorrect Code.");
     inputField.value = "";
   }
 }
+//end of page 1 scripts
 
-// ================= PAGE 2 =================
+//question quiz
+
+// for access2 page
+
+// Function to handle the page transition with fade-out effect
+function transitionToPage(url) {
+  const currentPage = document.querySelector(".container");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
+function transitionToPage4(url) {
+  const currentPage = document.querySelector("#accessGrantedBox2");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
+function transitionToPage2(url) {
+  const currentPage = document.querySelector("#question-container");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
+// References to elements  for page 2
 const inputField2 = document.getElementById("codeInput2");
 const accessContainer2 = document.getElementById("accessContainer2");
 const accessGrantedBox2 = document.getElementById("accessGrantedBox2");
 
+// Function to append numbers to the input field
 function appendToInput2(value) {
-  if (!inputField2) return;
   if (inputField2.value.length < 4) {
     inputField2.value += value;
   }
 }
 
 function clearInput2() {
-  if (!inputField2) return;
+  // Changed from `clear` to avoid potential conflicts
   inputField2.value = "";
 }
 
+// Function to check the entered code and transition if correct
 function checkAccess2() {
-  if (!inputField2) return;
-
   const correctCode = "0406";
 
   if (inputField2.value === correctCode) {
+    // Hide the access container and show the "Access Granted" box
     accessContainer2.style.display = "none";
     accessGrantedBox2.classList.remove("hidden");
 
+    // Keep the "Access Granted" box visible for 2 seconds before redirecting
     setTimeout(() => {
-      transitionToPage("Bun.html", "#accessGrantedBox2");
+      transitionToPage4("bun.html");
     }, 2000);
   } else {
+    // Show an alert for incorrect code and clear the input
     alert("Access Denied! Incorrect Code.");
     inputField2.value = "";
   }
 }
+//end of page 1 scripts
+
+//question quiz

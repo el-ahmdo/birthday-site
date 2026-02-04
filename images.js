@@ -65,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     { src: "vides/vid4.MOV" },
     { src: "vides/vid5.MOV" },
     { src: "vides/vid1.mp4" },
-    { src: "vides/" },
     { src: "vides/vid7.MOV" },
     { src: "vides/vid8.MOV" },
     { src: "vides/vid9.MOV" },
