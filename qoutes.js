@@ -22,7 +22,7 @@ if (surprise) {
 }
 if (Dont) {
   Dont.addEventListener("click", () => {
-    transitionToPage("Access2.html", "menuGrid");
+    transitionToPage("access2.html", "menuGrid");
   });
 }
 
