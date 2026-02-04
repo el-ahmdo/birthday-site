@@ -26,6 +26,15 @@ function transitionToPage2(url) {
   }, 2000); // 2-second delay for fade-out
 }
 
+function transitionToPage4(url) {
+  const currentPage = document.querySelector("#accessGrantedBox2");
+  currentPage.classList.add("fade-out");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 2000); // 2-second delay for fade-out
+}
+
 // References to elements  for page 2
 const inputField = document.getElementById("codeInput");
 const accessContainer = document.getElementById("accessContainer");
@@ -45,7 +54,7 @@ function clearInput() {
 
 // Function to check the entered code and transition if correct
 function checkAccess() {
-  const correctCode = "2016";
+  const correctCode = "0599";
 
   if (inputField.value === correctCode) {
     // Hide the access container and show the "Access Granted" box
@@ -132,6 +141,3 @@ function checkAccess2() {
     inputField2.value = "";
   }
 }
-//end of page 1 scripts
-
-//question quiz
